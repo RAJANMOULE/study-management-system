@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="./4.cs_styles.css">
+    <link rel="stylesheet" href="../l.jpg">
+
+<head>
+    <title>Control statements</title>
+</head>
+<body>
+    <h1>Loops and Control Statements (continue, break and pass) in Python</h1>
+<div class="box">
+<div class="1">
+    Python programming language provides following types of loops to handle looping requirements.
+
+   <h3> While Loop</h3>
+    
+    Syntax :<br>
+    while expression:<br>
+    &emsp;statement(s)<br><br>
+    In Python, all the statements indented by the same number of character spaces after a programming construct are considered to be part of a single block of code. Python uses indentation as its method of grouping statements.
+    <br>
+    <br>
+    <div class="black">
+    # prints Hello Geek 3 Times<br>
+    count = 0<br>
+    while (count < 3): <br>   
+    &emsp;count = count+1<br>
+    &emsp;print("Hello Geek")<br>
+    <br>
+</div>
+    <div class="white">
+    Output:<br>
+    <br>
+    Hello Geek<br>
+    Hello Geek<br>
+    Hello Geek<br>
+    <br>
+</div>
+    See this for an example where while loop is used for iterators. As mentioned in the article, it is not recommended to use while loop for iterators in python.
+    <br>
+    
+ <h3>  For in Loop</h3>
+
+    In Python, there is no C style for loop, i.e., for (i=0; i>n; i++). There is “for in” loop which is similar to for each loop in other languages.
+    <br><br>
+    Syntax:<br>
+
+    for iterator_var in sequence:<br>
+    &emsp;statements(s)<br><br>
+    It can be used to iterate over iterators and a range.
+    <br>
+    <br>
+    <div class="black">
+    # Iterating over a list<br>
+    print("List Iteration")<br>
+    l = ["geeks", "for", "geeks"]<br>
+    for i in l:<br>
+    &emsp;print(i)<br>
+        <br>
+    # Iterating over a tuple (immutable)<br>
+    print("\nTuple Iteration")<br>
+    t = ("geeks", "for", "geeks")<br>
+    for i in t:<br>
+    &emsp;print(i)<br>
+        <br>
+    # Iterating over a String<br>
+    print("\nString Iteration")  <br>  
+    s = "Geeks"<br>
+    for i in s :<br>
+    &emsp;print(i)<br>
+        <br>
+    # Iterating over dictionary<br>
+    print("\nDictionary Iteration")<br>   
+    d = dict() <br>
+    d['xyz'] = 123<br>
+    d['abc'] = 345<br>
+    for i in d :<br>
+        print("%s  %d" %(i, d[i]))<br>
+    </div>
+    <br>
+    <div class="white">
+        
+    Output:<br>
+    <br>
+    List Iteration<br>
+    geeks<br>
+    for<br>
+    geeks<br>
+    <br>
+    Tuple Iteration<br>
+    geeks<br>
+    for<br>
+    geeks<br>
+    <br>
+    String Iteration<br>
+    G<br>
+    e<br>
+    e<br>
+    k<br>
+    s<br>
+    <br>
+    Dictionary Iteration<br>
+    xyz  123<br>
+    abc  345<br>
+    <br>
+    </div>
+
+</div>
+<div class="2">
+   <h3> Nested Loops</h3>
+
+Python programming language allows to use one loop inside another loop. Following section shows few examples to illustrate the concept. <br>
+<br> Syntax: <br><br>
+for iterator_var in sequence:<br>
+&emsp;    for iterator_var in sequence:<br>
+&emsp; &emsp;statements(s)<br>
+&emsp;&emsp; statements(s)<br><br>
+The syntax for a nested while loop statement in Python programming language is as follows:
+<br><br>
+while expression:<br>
+&emsp;  while expression:<br> 
+&emsp;&emsp;      statement(s)<br>
+&emsp;&emsp;       statement(s)<br><br>
+A final note on loop nesting is that we can put any type of loop inside of any other type of loop. For example a for loop can be inside a while loop or vice versa.
+<br>
+<br>
+<div class="black">
+for i in range(1, 5):<br>
+&emsp;  for j in range(i):<br>
+&emsp;&emsp;         print(i, end=' ')<br>
+&emsp; print()<br><br>
+</div>
+<div class="white">
+Output:<br>
+<br>
+1<br>
+2 2<br>
+3 3 3<br>
+4 4 4 4<br><br>
+</div>
+<h3>Loop Control Statements</h3>
+
+Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed. Python supports the following control statements.
+Continue Statement<br>
+It returns the control to the beginning of the loop.
+<br><br>
+<div class="black"> 
+# Prints all letters except 'e' and 's'<br>
+for letter in 'geeksforgeeks': <br>
+&emsp;if letter == 'e' or letter == 's':<br>
+&emsp;&emsp;   continue<br>
+&emsp;print 'Current Letter :', letter<br>
+&emsp;var = 10<br>
+</div><br>
+<div class="white">
+Output:<br>
+<br>
+Current Letter : g<br>
+Current Letter : k<br>
+Current Letter : f<br>
+Current Letter : o<br>
+Current Letter : r<br>
+Current Letter : g<br>
+Current Letter : k<br><br>
+</div>
+<h3> Break Statement</h3>
+It brings control out of the loop
+<br>
+<br>
+<div class="black">
+for letter in 'geeksforgeeks':<br> 
+&emsp;# break the loop as soon it sees 'e' <br>
+&emsp;# or 's'<br>
+&emsp;if letter == 'e' or letter == 's':<br>
+&emsp;   &emsp;break<br>
+print 'Current Letter :', letter<br>
+</div><br>
+<div class="white">
+Output:<br>
+<br>
+Current Letter : e<br>
+</div>
+<h3> Pass Statement</h3>
+We use pass statement to write empty loops. Pass is also used for empty control statement, function and classes.
+<br>
+<br>
+<div class="black"> 
+# An empty loop<br>
+for letter in 'geeksforgeeks':<br>
+&emsp;pass<br>
+print 'Last Letter :', letter<br><br>
+</div>
+<div class="white">
+Output:<br>
+<br>
+Last Letter : s
+
+</div>
+<br>
+</div>
+<div class="time-message">
+    <h4>
+        <form action='4.1.cs_quiz.py' method='post'>
+           <b> If you finished this topic click this button to attend quiz</b>
+<br>        <textarea hidden id="timeInSeconds" name='a11'>0</textarea>
+            <textarea hidden name='a22'>Control Statements</textarea>
+
+        <input type='submit' value='Quiz page'></form>
+    </h4>
+</div>
+
+</div>
+<div>
+    <html lang="en"><head>
+        <link rel="canonical" href="https://jasonzissman.github.io//time-me-demo/" />
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@type":"WebPage","description":"An exploration of building and maintaining a successful software development organization.","headline":"Time Me Demo","url":"https://jasonzissman.github.io//time-me-demo/"}</script>
+        
+        <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://jasonzissman.github.io//feed.xml" title="Jason Zissman" /></head>
+        <body>
+        <main class="page-content" aria-label="Content">
+              <div class="wrapper">
+                <article class="post">
+        
+          <div class="post-content">
+            <div class="top-level-message">
+        
+        </div>
+        
+        
+        <link rel="stylesheet" type="text/css" href="style1.css" />
+        
+        <script src="timeme.min.js"></script>
+        
+        <script type="text/javascript">
+            TimeMe.initialize({
+                currentPageName: "my-home-page", // current page
+                idleTimeoutInSeconds: 50, // stop recording time due to inactivity
+                
+            });
+        
+            TimeMe.callAfterTimeElapsedInSeconds(4, function(){
+                console.log("The user has been using the page for 4 seconds! Let's prompt them with something.");
+            });
+        
+            TimeMe.callAfterTimeElapsedInSeconds(9, function(){
+                console.log("The user has been using the page for 9 seconds! Let's prompt them with something.");
+            });
+        
+        
+            window.onload = function(){
+                TimeMe.trackTimeOnElement('area-of-interest-1');
+                TimeMe.trackTimeOnElement('area-of-interest-2');
+                setInterval(function(){
+                    var timeSpentOnPage = TimeMe.getTimeOnCurrentPageInSeconds();
+                    document.getElementById('timeInSeconds').textContent = timeSpentOnPage.toFixed(2);
+        
+                    var timeSpentOnElement = TimeMe.getTimeOnElementInSeconds('area-of-interest-1');
+                    document.getElementById('area-of-interest-time-1').textContent = timeSpentOnElement.toFixed(2);
+        
+                    var timeSpentOnElement = TimeMe.getTimeOnElementInSeconds('area-of-interest-2');
+                    document.getElementById('area-of-interest-time-2').textContent = timeSpentOnElement.toFixed(2);
+                }, 25);
+            }
+        </script>
+        
+        
+          </div>
+        
+        </article>
+        
+              </div>
+            </main><footer class="site-footer h-card">
+          <data class="u-url" href="/"></data>
+        
+          <div class="wrapper">
+        
+        
+            <div class="footer-col-wrapper">
+              <div class="footer-col footer-col-1">
+                <ul class="contact-list">
+              </div>
+        
+              </div>
+        
+              
+            </div>
+        
+          </div>
+        
+        </footer>
+        </body>
+        
+        
+</div>
+
+</body>
+</html> 
