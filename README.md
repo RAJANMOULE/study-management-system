@@ -1,0 +1,4 @@
+# study-management-system
+The main concept of this project is monitoring the study time duration. Like how long they take time to study each concept and how long they take to finish the quiz test. Once they completed the quiz test it will automatically send email to their parents. That email contains the information of time taken to read that concept, quiz time and how much mark they got on that quiz.
+This project is done by using CGI.  CGI stands for common gateway interface. It provides an interface between http server and programs generating web content. These programs are better known as CGI scripts.
+In this project I’ve used CGI , MYSQL , smtplib  libraries. And I’ve used two types of timers. One is countdown timer for quiz and another one is time duration to take study each concept. Well, this timer program has some characteristics that if we don’t move the cursor for one minute the timer will stop and if we minimize the tab it will stop.
