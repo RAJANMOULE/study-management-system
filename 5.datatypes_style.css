@@ -1,0 +1,39 @@
+.box{
+    position: relative;
+    top:10px;
+    z-index: 1;
+    background:transparent;        
+    max-width: 900px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align:left;
+    color:rgb(11, 19, 22);
+    box-shadow: 0 0 20px 0 rgba(55, 55, 55, 0.2), 0 5px 5px 0 rgba(55, 55, 55, 0.24);
+    font-size: 20px;
+}
+h1{
+    color: rgb(180, 49, 252);
+    font-size: 45px;
+}
+
+body{
+     	background-image: url('ppp.jpg');
+
+	background-attachment: fixed; 
+	background-repeat: no-repeat;
+ 	background-size: cover;
+    	font-family: 'Vibur', cursive;
+/*   the main font linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);   */
+    font-family: 'Abel', sans-serif;
+opacity: .95;
+background-image:  
+}
+.black{
+color: rgb(28, 105, 9);
+font-size: 18px;
+}
+.white{
+    color: rgb(235, 60, 60);
+    font-size: 17px;
+
+}

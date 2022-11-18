@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./5.datatypes_style.css">
+  <link rel="stylesheet" href="./ppp.jpg">
+  
+  <title>Data types</title>
+</head>
+<body>
+<h1> <center> Python Data Types </center></h1>
+<div class="box">
+<div class="str">
+   <h2> Sequence Type</h2>
+In Python, sequence is the ordered collection of similar or different data types. Sequences allows to store <br>
+multiple values in an organized and efficient fashion. There are several sequence types in Python 
+<br>
+<br>
+String<br>
+List<br>
+Tuple<br>
+<h3> 1) String </h3>
+In Python, Strings are arrays of bytes representing Unicode characters. A string is a collection of one or more 
+characters put in a single quote, double-quote or triple quote. In python there is no character data type, a 
+character is a string of length one. It is represented by str class.
+<br><br>
+
+<b> Creating String</b><br><br>
+Strings in Python can be created using single quotes or double quotes or even triple quotes.
+<br>
+<br>
+<div class="black">
+# Python Program for <br>
+# Creation of String <br><br>
+# Creating a String  <br>
+# with single Quotes <br><br>
+String1 = 'Welcome to the Geeks World'<br>
+print("String with the use of Single Quotes: ") <br>
+print(String1) <br><br>
+</div>
+<div class="black">
+# Creating a String <br>
+# with double Quotes <br><br>
+String1 = "I'm a Geek"<br>
+print("\nString with the use of Double Quotes: ") <br>
+print(String1) <br>
+print(type(String1))<br><br>
+</div>
+<div class="black">
+# Creating a String <br>
+# with triple Quotes <br><br>
+String1 = '''I'm a Geek and I live in a world of "Geeks"'''<br>
+print("\nString with the use of Triple Quotes: ") <br>
+print(String1) <br>
+print(type(String1))<br><br>
+</div>
+<div class="black">
+# Creating String with triple <br>
+# Quotes allows multiple lines <br><br>
+String1 = '''Geeks <br>
+            For <br>
+            Life'''<br>
+print("\nCreating a multiline String: ")<br> 
+print(String1) <br><br>
+</div>
+<div class="white">
+Output:<br><br>
+String with the use of Single Quotes: <br>
+Welcome to the Geeks World<br>
+<br>
+String with the use of Double Quotes: <br>
+I'm a Geek<br>
+<class 'str'><br>
+
+String with the use of Triple Quotes: <br><br>
+I'm a Geek and I live in a world of "Geeks"<br>
+<class 'str'><br>
+Creating a multiline String: <br>
+Geeks <br>
+            For<br> 
+            Life<br>
+ 
+<br>
+</div>
+<b> Accessing elements of String</b><br>
+<br>
+In Python, individual characters of a String can be accessed by using the method of Indexing. Indexing allows negative address references to access characters from the back of the String, e.g. -1 refers to the last character, -2 refers to 
+the second last character and so on.
+<br><br>
+<b>Python string indexing </b>
+<br><br>
+<div class="black">
+# Python Program to Access<br> 
+# characters of String <br>
+<br>
+String1 = "GeeksForGeeks"<br>
+print("Initial String: ") <br>
+print(String1) <br>
+<br>
+# Printing First character <br>
+print("\nFirst character of String is: ") <br>
+print(String1[0]) <br>
+<br>
+# Printing Last character<br> 
+print("\nLast character of String is: ") <br>
+print(String1[-1]) <br><br>
+Output:<br>
+<br>
+Initial String:<br> 
+GeeksForGeeks<br>
+<br>
+First character of String is: <br>
+G<br>
+<br>
+Last character of String is: <br>
+s
+</div>
+
+
+
+
+</div>
+<br>
+<div class="list">
+<h3> 2) List</h3>
+Lists are just like the arrays, declared in other languages which is a ordered collection of data. It is very flexible as the items in a list do not need to be of the same type.
+ <br>
+ <br>
+<b> Creating List</b><br><br>
+Lists in Python can be created by just placing the sequence inside the square brackets[].
+<br>
+<br>
+<div class="black">
+# Python program to demonstrate<br>  
+# Creation of List  <br>
+<br>
+# Creating a List <br>
+List = [] <br>
+print("Initial blank List: ") <br>
+print(List) <br>
+<br>
+# Creating a List with  <br>
+# the use of a String <br>
+List = ['GeeksForGeeks'] <br>
+print("\nList with the use of String: ")<br> 
+print(List) <br>
+<br>
+# Creating a List with <br>
+# the use of multiple values<br> 
+List = ["Geeks", "For", "Geeks"] <br>
+print("\nList containing multiple values: ")<br> 
+print(List[0])  <br>
+print(List[2]) <br>
+<br>
+# Creating a Multi-Dimensional List<br> 
+# (By Nesting a list inside a List) <br>
+List = [['Geeks', 'For'], ['Geeks']] <br>
+print("\nMulti-Dimensional List: ") <br>
+print(List) <br>
+</div><br>
+<div class="white">
+Output:<br>
+<br>
+Initial blank List:<br> 
+[]<br>
+<br>
+List with the use of String: <br>
+['GeeksForGeeks']<br>
+<br>
+List containing multiple values: <br>
+Geeks<br>
+Geeks<br>
+<br>
+Multi-Dimensional List: <br>
+[['Geeks', 'For'], ['Geeks']]<br>
+<br>
+</div>
+<br>
+<b> Accessing elements of List</b><br><br>
+In order to access the list items refer to the index number. Use the index operator [ ] to access an item in a list. In Python, negative sequence indexes represent positions from the end of the array. Instead of having to compute the offset as in List[len(List)-3], it is enough to just write List[-3]. Negative indexing means beginning from the end, -1 refers to the last item, -2 refers to the second-last item, etc.
+<br>
+<br>
+<div class="black">
+# Python program to demonstrate  <br>
+# accessing of element from list <br>
+<br>
+# Creating a List with <br>
+# the use of multiple values<br> 
+List = ["Geeks", "For", "Geeks"] <br>
+<br>
+# accessing a element from the  <br>
+# list using index number <br>
+print("Accessing element from the list") <br>
+print(List[0])  <br>
+print(List[2]) <br>
+<br>
+# accessing a element using <br>
+# negative indexing <br>
+print("Accessing element using negative indexing") <br>
+<br>
+# print the last element of list <br>
+print(List[-1]) <br>
+<br>
+# print the third last element of list  <br>
+print(List[-3]) <br>
+</div>
+<br>
+<div class="white">
+Output:<br>
+<br>
+Accessing element from the list<br>
+Geeks<br>
+Geeks<br>
+Accessing element using negative indexing<br>
+Geeks<br>
+Geeks<br>
+<br>
+</div>
+</div>
+<div class="tuple">
+ <h3>   3) Tuple </h3>
+
+Just like list, tuple is also an ordered collection of Python objects. The only difference between tuple and list is that tuples are immutable i.e. tuples cannot be modified after it is created. It is represented by tuple class.
+<br> 
+<br>
+<b> Creating Tuple</b><br><br>
+In Python, tuples are created by placing a sequence of values separated by 'comma' with or without the use of parentheses for grouping of the data sequence. Tuples can contain any number of elements and of any datatype (like strings, integers, list, etc.).
+<br>
+Note: Tuples can also be created with a single element, but it is a bit tricky. Having one element in the parentheses is not sufficient, there must be a trailing ‘comma’ to make it a tuple.
+<br>
+<br>
+<div class="black">
+# Python program to demonstrate  <br>
+# creation of Set <br>
+<br>
+# Creating an empty tuple <br>
+Tuple1 = () <br>
+print("Initial empty Tuple: ") <br>
+print (Tuple1) <br>
+<br>
+# Creating a Tuple with  <br>
+# the use of Strings <br>
+Tuple1 = ('Geeks', 'For')<br> 
+print("\nTuple with the use of String: ") <br>
+print(Tuple1) <br>
+<br>
+# Creating a Tuple with <br>
+# the use of list <br>
+list1 = [1, 2, 4, 5, 6]<br> 
+print("\nTuple using List: ")<br> 
+print(tuple(list1)) <br>
+<br>
+# Creating a Tuple with the <br>
+# use of built-in function <br>
+Tuple1 = tuple('Geeks') <br>
+print("\nTuple with the use of function: ") <br>
+print(Tuple1) <br>
+<br>
+# Creating a Tuple  <br>
+# with nested tuples <br>
+Tuple1 = (0, 1, 2, 3) <br>
+Tuple2 = ('python', 'geek')<br> 
+Tuple3 = (Tuple1, Tuple2) <br>
+print("\nTuple with nested tuples: ")<br> 
+print(Tuple3) <br>
+</div>
+<br>
+<div class="white">
+Output:<br>
+<br>
+Initial empty Tuple: <br>
+()<br>
+<br>
+Tuple with the use of String: <br>
+('Geeks', 'For')<br>
+<br>
+Tuple using List: <br>
+(1, 2, 4, 5, 6)<br>
+<br>
+Tuple with the use of function: <br>
+('G', 'e', 'e', 'k', 's')<br>
+<br>
+Tuple with nested tuples: <br>
+((0, 1, 2, 3), ('python', 'geek'))<br>
+</div>
+<br>
+<br>
+Note – Creation of Python tuple without the use of parentheses is known as Tuple Packing.<br>
+<br>
+<b>Accessing elements of Tuple </b><br><br>
+In order to access the tuple items refer to the index number. Use the index operator [ ] to access an item in a tuple. The index must be an integer. Nested tuples are accessed using nested indexing.
+<br>
+<br>
+<div class="black">
+# Python program to <br>
+# demonstrate accessing tuple<br>
+<br>
+tuple1 = tuple([1, 2, 3, 4, 5])<br>
+<br>
+# Accessing element using indexing<br>
+print("First element of tuple")<br>
+print(tuple1[0])<br>
+<br>
+# Accessing element from last<br>
+# negative indexing<br>
+print("\nLast element of tuple")<br>
+print(tuple1[-1])<br>
+<br>
+print("\nThird last element of tuple")<br>
+print(tuple1[-3])<br>
+</div>
+<br>
+<div class="white"> 
+Output:<br>
+<br>
+First element of tuple<br>
+1<br>
+Last element of tuple<br>
+5 <br>
+Third last element of tuple<br>
+3
+</div>
+<br>
+</div>
+<div class="time-message">
+    <h4>
+        <form action='5.1.datatypes_quiz.py' method='post'>
+          <center>  <b>If you finished this topic click this button to attend the quiz</b>
+<br>        <textarea hidden id="timeInSeconds" name='a1'>0</textarea>
+          <textarea hidden name='a2'>Datatypes</textarea>
+        <input  type='submit' value='quiz page'></center></form>
+    </h4>
+</div>
+<center><p style="color:red";>(if you click this button the test will start right away. So be ready.)</p><center>
+</div>
+<div>
+    <html lang="en"><head>
+        <link rel="canonical" href="https://jasonzissman.github.io//time-me-demo/" />
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@type":"WebPage","description":"An exploration of building and maintaining a successful software development organization.","headline":"Time Me Demo","url":"https://jasonzissman.github.io//time-me-demo/"}</script>
+        
+        <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://jasonzissman.github.io//feed.xml" title="Jason Zissman" /></head>
+        <body>
+        <main class="page-content" aria-label="Content">
+              <div class="wrapper">
+                <article class="post">
+        
+          <div class="post-content">
+            <div class="top-level-message">
+        
+        </div>
+        
+        
+        <link rel="stylesheet" type="text/css" href="style1.css" />
+        
+        <script src="timeme.min.js"></script>
+        
+        <script type="text/javascript">
+            TimeMe.initialize({
+                currentPageName: "my-home-page", // current page
+                idleTimeoutInSeconds: 50, // stop recording time due to inactivity
+                
+            });
+        
+            TimeMe.callAfterTimeElapsedInSeconds(4, function(){
+                console.log("The user has been using the page for 4 seconds! Let's prompt them with something.");
+            });
+        
+            TimeMe.callAfterTimeElapsedInSeconds(9, function(){
+                console.log("The user has been using the page for 9 seconds! Let's prompt them with something.");
+            });
+        
+        
+            window.onload = function(){
+                TimeMe.trackTimeOnElement('area-of-interest-1');
+                TimeMe.trackTimeOnElement('area-of-interest-2');
+                setInterval(function(){
+                    var timeSpentOnPage = TimeMe.getTimeOnCurrentPageInSeconds();
+                    document.getElementById('timeInSeconds').textContent = timeSpentOnPage.toFixed(2);
+        
+                    var timeSpentOnElement = TimeMe.getTimeOnElementInSeconds('area-of-interest-1');
+                    document.getElementById('area-of-interest-time-1').textContent = timeSpentOnElement.toFixed(2);
+        
+                    var timeSpentOnElement = TimeMe.getTimeOnElementInSeconds('area-of-interest-2');
+                    document.getElementById('area-of-interest-time-2').textContent = timeSpentOnElement.toFixed(2);
+                }, 25);
+            }
+        </script>
+        
+        
+          </div>
+        
+        </article>
+        
+              </div>
+            </main><footer class="site-footer h-card">
+          <data class="u-url" href="/"></data>
+        
+          <div class="wrapper">
+        
+        
+            <div class="footer-col-wrapper">
+              <div class="footer-col footer-col-1">
+                <ul class="contact-list">
+              </div>
+        
+              </div>
+        
+              
+            </div>
+        
+          </div>
+        
+        </footer>
+        </body>
+        
+        
+</div>
+</body>
+</html>
